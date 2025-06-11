@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Octopus Energy - Review Your Order</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.housetabz.com/sdk/v1/housetabz.min-v4.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #210654;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        .octopus-pink { color: #ff48d8; }
+        .octopus-pink-bg { background-color: #ff48d8; }
+        .octopus-purple-light { background-color: rgba(255, 72, 216, 0.1); }
+        .octopus-border { border-color: rgba(255, 255, 255, 0.1); }
+    </style>
+</head>
+<body class="text-white min-h-screen">
+    <header class="px-6 py-4 border-b octopus-border">
+        <div class="max-w-4xl mx-auto">
+            <img src="/assets/octopus-logo.png" alt="Octopus Energy" class="h-8" />
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 py-8">
+        <h1 class="text-3xl font-light mb-8">Review your order</h1>
+        
+        <!-- Your Plan Section -->
+        <section class="mb-12">
+            <h2 class="text-xl font-medium mb-6">Your Plan</h2>
+            
+            <div class="mb-6">
+                <h3 class="text-2xl font-medium mb-2">Octo 12</h3>
+                <p class="text-gray-300 mb-4">Our most basic plan</p>
+                
+                <div class="text-4xl font-light mb-2">
+                    <span class="octopus-pink">$137</span>
+                </div>
+                <p class="text-gray-300 mb-4">monthly estimate for 1000 kWh</p>
+                
+                <p class="text-sm text-gray-400">
+                    Unit cost: <span class="font-medium text-white">13.7¢/kWh</span>
+                </p>
+            </div>
+            
+            <details class="mb-8">
+                <summary class="text-lg font-medium cursor-pointer octopus-pink hover:text-pink-300">Plan details</summary>
+                <div class="mt-4 text-gray-300 text-sm space-y-2">
+                    <p>• Fixed rate for 12 months</p>
+                    <p>• 100% renewable energy</p>
+                    <p>• No early termination fees</p>
+                    <p>• 24/7 customer support</p>
+                </div>
+            </details>
+            
+            <div class="border-t octopus-border pt-6">
+                <div class="flex justify-between items-center">
+                    <span class="text-xl font-medium">Total due today</span>
+                    <span class="text-2xl font-light">$0</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customer Details -->
+        <section class="mb-12">
+            <h2 class="text-xl font-medium mb-6">Customer details summary</h2>
+            <p class="text-sm text-gray-400 mb-6">We will send you an email to verify your account.</p>
+            
+            <div class="space-y-4 text-sm">
+                <div>
+                    <span class="text-gray-400">Name</span><br>
+                    <span class="font-medium">Walt Boxwell</span>
+                </div>
+                <div>
+                    <span class="text-gray-400">Phone number</span><br>
+                    <span class="font-medium">(806) 316-1686</span>
+                </div>
+           
+
+            </div>
+        </section>
+
+        <!-- Payment Details -->
+        <section class="mb-12">
+            <h2 class="text-xl font-medium mb-6">Add your payment details</h2>
+            
+            <!-- Payment Method Tabs -->
+            <div class="flex mb-6 border-b octopus-border">
+                <button class="px-4 py-2 font-medium border-b-2 border-transparent hover:border-gray-400">Bank account</button>
+                <button class="px-4 py-2 font-medium border-b-2 border-transparent hover:border-gray-400">Credit card</button>
+
+            </div>
+            
+            <!-- HouseTabz Payment Option -->
+            <div class="mb-8">
+                <p class="text-sm text-gray-300 mb-4">Split energy costs automatically with your housemates using HouseTabz - just like PayPal for shared household expenses.</p>
+                
+                <div class="mb-4">
+                    <div id="housetabz-button"></div>
+                </div>
+                
+                <div class="octopus-purple-light p-4 rounded-lg text-sm">
+                    <p class="octopus-pink font-medium mb-2">Good to know</p>
+                    <p>With HouseTabz, your energy bill will be automatically split between all housemates. Everyone gets notified and pays their share - no more chasing people for money!</p>
+                </div>
+            </div>
+            
+            <!-- Autopay Section -->
+          
+        </section>
+
+        <!-- Finalize Account -->
+        <section class="mb-12">
+            <h2 class="text-xl font-medium mb-6">Finalize your account</h2>
+            
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-sm text-gray-300 mb-2">Set up a password</label>
+                </div>
+                
+                <div>
+                    <label class="block text-sm text-gray-400 mb-1">Username:</label>
+                    <p class="font-medium">waltboxwell@gmail.com</p>
+                </div>
+                
+                <div>
+                    <label class="block text-sm text-gray-300 mb-1">Password *</label>
+                    <input type="password" class="w-full p-3 bg-white/10 border octopus-border rounded text-white placeholder-gray-400" placeholder="Enter your password">
+                </div>
+                
+                <div>
+                    <label class="block text-sm text-gray-300 mb-1">Confirm your password *</label>
+                    <input type="password" class="w-full p-3 bg-white/10 border octopus-border rounded text-white placeholder-gray-400" placeholder="Confirm your password">
+                </div>
+            </div>
+        </section>
+
+        <!-- Submit Button -->
+        <div class="text-center">
+            <button class="octopus-pink-bg text-white px-8 py-4 rounded-lg font-medium text-lg hover:bg-pink-600 transition-colors">
+                Complete Sign Up
+            </button>
+        </div>
+    </main>
+
+    
+    <div class="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono shadow-lg max-w-sm">
+        <div class="font-medium mb-2 octopus-pink">🔒 HouseTabz Integration</div>
+        <div id="debug-info">Loading SDK...</div>
+    </div>
+
+    <script>
+        // Debug fetch requests
+        const originalFetch = window.fetch;
+        window.fetch = function(...args) {
+            console.log('🔍 FETCH REQUEST:', args[0]);
+            console.log('🔍 FETCH OPTIONS:', args[1]);
+            
+            const fetchPromise = originalFetch.apply(this, args);
+            
+            const timeoutPromise = new Promise((_, reject) => {
+                setTimeout(() => reject(new Error('Fetch timeout after 10 seconds')), 10000);
+            });
+            
+            return Promise.race([fetchPromise, timeoutPromise])
+                .then(response => {
+                    console.log('🔍 FETCH SUCCESS:', response.status, response.url);
+                    return response.clone().text().then(text => {
+                        console.log('🔍 FETCH RESPONSE BODY:', text);
+                        return new Response(text, {
+                            status: response.status,
+                            statusText: response.statusText,
+                            headers: response.headers
+                        });
+                    });
+                })
+                .catch(error => {
+                    console.error('🔍 FETCH FAILED:', error.message);
+                    console.error('🔍 FETCH ERROR DETAILS:', error);
+                    throw error;
+                });
+        };
+        
+        const PARTNER_CONFIG = {
+            apiKey: 'whec-c8e31445c22b73e5f6010151de255137',
+            environment: 'development'
+        };
+        
+        async function initializeHouseTabzSDK() {
+            try {
+                console.log('🔍 1. Starting SDK init...');
+                document.getElementById('debug-info').innerHTML = '🔄 Initializing SDK...';
+                
+                console.log('🔍 2. Calling init...');
+                await window.HouseTabz.init({
+                    apiKey: PARTNER_CONFIG.apiKey,
+                    environment: PARTNER_CONFIG.environment
+                });
+                
+                console.log('🔍 3. Init successful, now mounting...');
+                document.getElementById('debug-info').innerHTML += '<br>✅ SDK initialized';
+        
+                console.log('🔍 4. Calling mount...');
+                await window.HouseTabz.mount('#housetabz-button', {
+                    serviceName: 'Octopus Energy - Octo12',
+                    serviceType: 'energy',
+                    estimatedAmount: 137,
+                    requiredUpfrontPayment: 0,
+                    transactionId: `OCTOPUS-${Date.now()}`,
+                    buttonStyle: {
+                        buttonText: 'Connect to',
+                        width:'100%'
+                    },
+                    onSuccess: (data) => {
+                        console.log('✅ Payment successful:', data);
+                        document.getElementById('debug-info').innerHTML += '<br>✅ Payment completed!';
+                        
+                        // Show success message
+                        const successDiv = document.createElement('div');
+                        successDiv.className = 'mt-4 p-4 octopus-purple-light rounded-lg border border-pink-500';
+                        successDiv.innerHTML = `
+                            <div class="flex items-center text-white">
+                                <svg class="w-5 h-5 mr-2 octopus-pink" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <div>
+                                    <div class="font-medium octopus-pink">HouseTabz request sent! 🎉</div>
+                                    <div class="text-sm mt-1">Your housemates will receive a notification to approve this energy plan.</div>
+                                </div>
+                            </div>
+                        `;
+                        document.querySelector('section:last-of-type').appendChild(successDiv);
+                    },
+                    onError: (error) => {
+                        console.error('❌ Payment error:', error);
+                        document.getElementById('debug-info').innerHTML += `<br>❌ Error: ${error.message}`;
+                    },
+                    onCancel: () => {
+                        console.log('⚠️ Payment cancelled'); 
+                        document.getElementById('debug-info').innerHTML += '<br>⚠️ Payment cancelled';
+                    }
+                });
+                
+                console.log('🔍 5. Mount completed successfully');
+                document.getElementById('debug-info').innerHTML += '<br>✅ Button ready - click to test';
+                
+                const container = document.getElementById('housetabz-button');
+                console.log('🔍 6. Button container HTML:', container.innerHTML);
+                console.log('🔍 7. Button container children count:', container.children.length);
+                
+            } catch (error) {
+                console.error('🔍 SDK ERROR:', error);
+                console.error('🔍 ERROR DETAILS:', error.message, error.stack);
+                document.getElementById('debug-info').innerHTML += `<br>❌ Error: ${error.message}`;
+            }
+        }
+        
+        window.addEventListener('load', () => {
+            console.log('🔍 Page loaded, starting init...');
+            initializeHouseTabzSDK();
+        });
+    </script>
+</body>
+</html>
