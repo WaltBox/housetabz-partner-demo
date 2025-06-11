@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 8080;
 // Load partner credentials from environment
 const PARTNER_SECRET = process.env.PARTNER_SECRET;
 const PARTNER_API_KEY = process.env.PARTNER_API_KEY;
-const HOUSETABZ_API_BASE = process.env.HOUSETABZ_API_BASE || 'https//api.housetabz.com'; // Your actual backend
+const HOUSETABZ_API_BASE = process.env.HOUSETABZ_API_BASE || 'https://api.housetabz.com'; // Your actual backend
 const PARTNER_ID = process.env.PARTNER_ID || '2'; // Your actual partner ID
 
 if (!PARTNER_SECRET || !PARTNER_API_KEY) {
