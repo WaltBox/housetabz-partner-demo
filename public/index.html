@@ -1,153 +1,195 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Octopus Energy - Review Your Order</title>
+    <title>Maison Energy - Review Your Order</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.housetabz.com/sdk/v1/housetabz.min-v4.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: #210654;
+            background-color: #ffffff;
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: #1f2937;
         }
-        .octopus-pink { color: #ff48d8; }
-        .octopus-pink-bg { background-color: #ff48d8; }
-        .octopus-purple-light { background-color: rgba(255, 72, 216, 0.1); }
-        .octopus-border { border-color: rgba(255, 255, 255, 0.1); }
+        .maison-green { color: #059669; }
+        .maison-green-bg { background-color: #059669; }
+        .maison-green-light { background-color: #ecfdf5; }
+        .maison-border { border-color: #e5e7eb; }
+        .maison-text-secondary { color: #6b7280; }
+        .maison-bg-card { background-color: #f9fafb; }
+        
+        /* Mobile-first responsive styling */
+        .mobile-card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            border: 1px solid #f3f4f6;
+        }
+        
+        .pricing-highlight {
+            font-size: 2.5rem;
+            font-weight: 300;
+            line-height: 1;
+        }
+        
+        .plan-badge {
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
     </style>
 </head>
-<body class="text-white min-h-screen">
-    <header class="px-6 py-4 border-b octopus-border">
+<body class="min-h-screen bg-gray-50">
+    <header class="px-6 py-4 bg-white border-b maison-border">
         <div class="max-w-4xl mx-auto">
-            <img src="/assets/octopus-logo.png" alt="Octopus Energy" class="h-8" />
+            <div class="flex items-center">
+                <div class="text-2xl font-bold maison-green">MAISON</div>
+                <div class="ml-1 text-2xl font-light text-gray-600">ENERGY</div>
+            </div>
         </div>
     </header>
 
     <main class="max-w-4xl mx-auto px-6 py-8">
-        <h1 class="text-3xl font-light mb-8">Review your order</h1>
+        <h1 class="text-3xl font-light mb-8 text-gray-900">Review your order</h1>
         
         <!-- Your Plan Section -->
         <section class="mb-12">
-            <h2 class="text-xl font-medium mb-6">Your Plan</h2>
+            <h2 class="text-xl font-medium mb-6 text-gray-900">Your Plan</h2>
             
-            <div class="mb-6">
-                <h3 class="text-2xl font-medium mb-2">Octo 12</h3>
-                <p class="text-gray-300 mb-4">Our most basic plan</p>
-                
-                <div class="text-4xl font-light mb-2">
-                    <span class="octopus-pink">$137</span>
+            <div class="mobile-card p-6 mb-6">
+                <div class="flex items-start justify-between mb-4">
+                    <div>
+                        <h3 class="text-2xl font-medium mb-2 text-gray-900">Energy Maison</h3>
+                        <p class="maison-text-secondary mb-4">Our most rewarding plan</p>
+                    </div>
+                    <span class="plan-badge">Popular</span>
                 </div>
-                <p class="text-gray-300 mb-4">monthly estimate for 1000 kWh</p>
                 
-                <p class="text-sm text-gray-400">
-                    Unit cost: <span class="font-medium text-white">13.7¢/kWh</span>
+                <div class="pricing-highlight maison-green mb-2">
+                    $98<span class="text-lg text-gray-500 font-normal">.00</span>
+                </div>
+                <p class="maison-text-secondary mb-4">monthly estimate for 1000 kWh</p>
+                
+                <div class="maison-green-light p-4 rounded-lg mb-4">
+                    <div class="flex items-center mb-2">
+                        <svg class="w-5 h-5 maison-green mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="font-medium maison-green">100% green, clean, and renewable energy</span>
+                    </div>
+                    <p class="text-sm maison-text-secondary ml-7">Get back 50% of the monthly profit generated from your electric bill</p>
+                </div>
+                
+                <p class="text-sm maison-text-secondary">
+                    Unit cost: <span class="font-medium text-gray-900">9.8¢/kWh</span>
                 </p>
             </div>
             
             <details class="mb-8">
-                <summary class="text-lg font-medium cursor-pointer octopus-pink hover:text-pink-300">Plan details</summary>
-                <div class="mt-4 text-gray-300 text-sm space-y-2">
+                <summary class="text-lg font-medium cursor-pointer maison-green hover:text-green-700">Plan details</summary>
+                <div class="mt-4 maison-text-secondary text-sm space-y-2">
                     <p>• Fixed rate for 12 months</p>
                     <p>• 100% renewable energy</p>
-                    <p>• No early termination fees</p>
-                    <p>• 24/7 customer support</p>
+                    <p>• Up to 50% cash-back every month</p>
+                    <p>• No long-term contract</p>
+                    <p>• Friendly customer service</p>
                 </div>
             </details>
             
-            <div class="border-t octopus-border pt-6">
+            <div class="border-t maison-border pt-6">
                 <div class="flex justify-between items-center">
-                    <span class="text-xl font-medium">Total due today</span>
-                    <span class="text-2xl font-light">$0</span>
+                    <span class="text-xl font-medium text-gray-900">Total due today</span>
+                    <span class="text-2xl font-light text-gray-900">$0</span>
                 </div>
             </div>
         </section>
 
         <!-- Customer Details -->
         <section class="mb-12">
-            <h2 class="text-xl font-medium mb-6">Customer details summary</h2>
-            <p class="text-sm text-gray-400 mb-6">We will send you an email to verify your account.</p>
+            <h2 class="text-xl font-medium mb-6 text-gray-900">Customer details summary</h2>
+            <p class="text-sm maison-text-secondary mb-6">We will send you an email to verify your account.</p>
             
-            <div class="space-y-4 text-sm">
-                <div>
-                    <span class="text-gray-400">Name</span><br>
-                    <span class="font-medium">Walt Boxwell</span>
+            <div class="mobile-card p-6">
+                <div class="space-y-4 text-sm">
+                    <div>
+                        <span class="maison-text-secondary">Name</span><br>
+                        <span class="font-medium text-gray-900">Walt Boxwell</span>
+                    </div>
+                    <div>
+                        <span class="maison-text-secondary">Phone number</span><br>
+                        <span class="font-medium text-gray-900">(806) 316-1686</span>
+                    </div>
                 </div>
-                <div>
-                    <span class="text-gray-400">Phone number</span><br>
-                    <span class="font-medium">(806) 316-1686</span>
-                </div>
-           
-
             </div>
         </section>
 
         <!-- Payment Details -->
         <section class="mb-12">
-            <h2 class="text-xl font-medium mb-6">Add your payment details</h2>
+            <h2 class="text-xl font-medium mb-6 text-gray-900">Add your payment details</h2>
             
             <!-- Payment Method Tabs -->
-            <div class="flex mb-6 border-b octopus-border">
-                <button class="px-4 py-2 font-medium border-b-2 border-transparent hover:border-gray-400">Bank account</button>
-                <button class="px-4 py-2 font-medium border-b-2 border-transparent hover:border-gray-400">Credit card</button>
-
+            <div class="flex mb-6 border-b maison-border bg-white rounded-t-lg">
+                <button class="px-6 py-3 font-medium border-b-2 border-transparent hover:border-gray-400 text-gray-700">Bank account</button>
+                <button class="px-6 py-3 font-medium border-b-2 border-transparent hover:border-gray-400 text-gray-700">Credit card</button>
             </div>
             
             <!-- HouseTabz Payment Option -->
-            <div class="mb-8">
-                <p class="text-sm text-gray-300 mb-4">Split energy costs automatically with your housemates using HouseTabz - just like PayPal for shared household expenses.</p>
+            <div class="mobile-card p-6 mb-8">
+                <p class="text-sm maison-text-secondary mb-4">Split energy costs automatically with your housemates using HouseTabz - just like PayPal for shared household expenses.</p>
                 
                 <div class="mb-4">
                     <div id="housetabz-button"></div>
                 </div>
                 
-                <div class="octopus-purple-light p-4 rounded-lg text-sm">
-                    <p class="octopus-pink font-medium mb-2">Good to know</p>
-                    <p>With HouseTabz, your energy bill will be automatically split between all housemates. Everyone gets notified and pays their share - no more chasing people for money!</p>
+                <div class="maison-green-light p-4 rounded-lg text-sm">
+                    <p class="maison-green font-medium mb-2">Good to know</p>
+                    <p class="text-gray-700">With HouseTabz, your energy bill will be automatically split between all housemates. Everyone gets notified and pays their share - no more chasing people for money!</p>
                 </div>
             </div>
-            
-            <!-- Autopay Section -->
-          
         </section>
 
         <!-- Finalize Account -->
         <section class="mb-12">
-            <h2 class="text-xl font-medium mb-6">Finalize your account</h2>
+            <h2 class="text-xl font-medium mb-6 text-gray-900">Finalize your account</h2>
             
-            <div class="space-y-4">
-                <div>
-                    <label class="block text-sm text-gray-300 mb-2">Set up a password</label>
-                </div>
-                
-                <div>
-                    <label class="block text-sm text-gray-400 mb-1">Username:</label>
-                    <p class="font-medium">waltboxwell@gmail.com</p>
-                </div>
-                
-                <div>
-                    <label class="block text-sm text-gray-300 mb-1">Password *</label>
-                    <input type="password" class="w-full p-3 bg-white/10 border octopus-border rounded text-white placeholder-gray-400" placeholder="Enter your password">
-                </div>
-                
-                <div>
-                    <label class="block text-sm text-gray-300 mb-1">Confirm your password *</label>
-                    <input type="password" class="w-full p-3 bg-white/10 border octopus-border rounded text-white placeholder-gray-400" placeholder="Confirm your password">
+            <div class="mobile-card p-6">
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm maison-text-secondary mb-2">Set up a password</label>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm maison-text-secondary mb-1">Username:</label>
+                        <p class="font-medium text-gray-900">waltboxwell@gmail.com</p>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm maison-text-secondary mb-1">Password *</label>
+                        <input type="password" class="w-full p-3 bg-white border maison-border rounded-lg text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-green-500 focus:border-green-500" placeholder="Enter your password">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm maison-text-secondary mb-1">Confirm your password *</label>
+                        <input type="password" class="w-full p-3 bg-white border maison-border rounded-lg text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-green-500 focus:border-green-500" placeholder="Confirm your password">
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Submit Button -->
         <div class="text-center">
-            <button class="octopus-pink-bg text-white px-8 py-4 rounded-lg font-medium text-lg hover:bg-pink-600 transition-colors">
+            <button class="maison-green-bg text-white px-8 py-4 rounded-lg font-medium text-lg hover:bg-green-700 transition-colors shadow-lg">
                 Complete Sign Up
             </button>
         </div>
     </main>
 
-    
-    <div class="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono shadow-lg max-w-sm">
-        <div class="font-medium mb-2 octopus-pink">🔒 HouseTabz Integration</div>
+    <div class="fixed bottom-4 right-4 bg-white text-gray-800 p-4 rounded-lg text-xs font-mono shadow-lg max-w-sm border maison-border">
+        <div class="font-medium mb-2 maison-green">🔒 HouseTabz Integration</div>
         <div id="debug-info">Loading SDK...</div>
     </div>
 
@@ -204,11 +246,11 @@
         
                 console.log('🔍 4. Calling mount...');
                 await window.HouseTabz.mount('#housetabz-button', {
-                    serviceName: 'Octopus Energy - Octo12',
+                    serviceName: 'Maison Energy - The Future is Bright',
                     serviceType: 'energy',
-                    estimatedAmount: 137,
+                    estimatedAmount: 98,
                     requiredUpfrontPayment: 0,
-                    transactionId: `OCTOPUS-${Date.now()}`,
+                    transactionId: `MAISON-${Date.now()}`,
                     buttonStyle: {
                         buttonText: 'Connect to',
                         width:'100%'
@@ -219,15 +261,15 @@
                         
                         // Show success message
                         const successDiv = document.createElement('div');
-                        successDiv.className = 'mt-4 p-4 octopus-purple-light rounded-lg border border-pink-500';
+                        successDiv.className = 'mt-4 p-4 maison-green-light rounded-lg border border-green-200';
                         successDiv.innerHTML = `
-                            <div class="flex items-center text-white">
-                                <svg class="w-5 h-5 mr-2 octopus-pink" fill="currentColor" viewBox="0 0 20 20">
+                            <div class="flex items-center text-gray-800">
+                                <svg class="w-5 h-5 mr-2 maison-green" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
                                 </svg>
                                 <div>
-                                    <div class="font-medium octopus-pink">HouseTabz request sent! 🎉</div>
-                                    <div class="text-sm mt-1">Your housemates will receive a notification to approve this energy plan.</div>
+                                    <div class="font-medium maison-green">HouseTabz request sent! 🎉</div>
+                                    <div class="text-sm mt-1 text-gray-600">Your housemates will receive a notification to approve this energy plan.</div>
                                 </div>
                             </div>
                         `;
